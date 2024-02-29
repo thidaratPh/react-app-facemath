@@ -38,10 +38,11 @@ function RankPages() {
         </Toolbar>
       </AppBar>
 
-      <div style={{display:"flex"}}>
-        <div >
-          <Card >
-          <CardMedia
+      <h4 style={{ justifyContent: "center" }}>อันดับรายสัปดาห์</h4>
+      <div style={{ display: "flex" }}>
+        <div>
+          <Card>
+            <CardMedia
               component="img"
               height="300"
               width="300"
@@ -56,17 +57,16 @@ function RankPages() {
           </Card>
         </div>
         <div>
-        <LineChart
-              xAxis={[{ data: [1, 2, 3, 5, 8, 10, 12] ,label: "วันที่" }]} //กำหนดค่าแกน
-              series={[
-                {
-                  data: [2, 5.5, 2, 8.5, 1.5, 5, 9]
-                },
-              ]}
-              width={500}
-              height={300}
-              
-            />
+          <LineChart
+            xAxis={[{ data: [1, 2, 3, 5, 8, 10, 12], label: "วันที่" }]} //กำหนดค่าแกน
+            series={[
+              {
+                data: [2, 5.5, 2, 8.5, 1.5, 5, 9],
+              },
+            ]}
+            width={500}
+            height={300}
+          />
         </div>
       </div>
     </>
