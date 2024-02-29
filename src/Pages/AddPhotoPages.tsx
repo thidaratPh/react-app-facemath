@@ -29,7 +29,6 @@ function AddPhotoPages() {
   }
   return (
     <>
-      <Box sx={{ flexGrow: 2 }}>
         <AppBar position="fixed" style={{ backgroundColor: "#F3BEE1" }}>
           <Toolbar>
             <img width="40" src="src\Photo\kitty.png" alt="" />
@@ -93,7 +92,6 @@ function AddPhotoPages() {
             </Button>
           </Card>
         </Container>
-      </Box>
     </>
   );
 }

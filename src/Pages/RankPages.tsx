@@ -1,9 +1,7 @@
 import {
   AppBar,
-  Box,
   Card,
   CardMedia,
-  Grid,
   IconButton,
   Toolbar,
   Typography,
@@ -40,39 +38,37 @@ function RankPages() {
         </Toolbar>
       </AppBar>
 
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={9}>
-          <Grid item xs={4}>
-            <Card sx={{ maxWidth: 345, alignItems: "center" }}>
-              <CardMedia
-                component="img"
-                height="300"
-                width="300"
-                image="src\Photo\cat1.jpg"
-                alt="Cat"
-              />
-              <h5>แมวเป้า</h5>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              52222
-            </Card>
-          </Grid>
-
-          <Grid item xs={2}>
-            <LineChart
-              xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]} //กำหนดค่าแกน
+      <div style={{display:"flex"}}>
+        <div >
+          <Card >
+          <CardMedia
+              component="img"
+              height="300"
+              width="300"
+              image="src\Photo\cat1.jpg"
+              alt="Cat"
+            />
+            <h5>แมวเป้า</h5>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            52222
+          </Card>
+        </div>
+        <div>
+        <LineChart
+              xAxis={[{ data: [1, 2, 3, 5, 8, 10, 12] ,label: "วันที่" }]} //กำหนดค่าแกน
               series={[
                 {
-                  data: [2, 5.5, 2, 8.5, 1.5, 5],
+                  data: [2, 5.5, 2, 8.5, 1.5, 5, 9]
                 },
               ]}
               width={500}
               height={300}
+              
             />
-          </Grid>
-        </Grid>
-      </Box>
+        </div>
+      </div>
     </>
   );
 }
